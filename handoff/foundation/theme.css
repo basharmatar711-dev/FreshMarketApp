@@ -1,0 +1,58 @@
+/*
+ * Field & Cleaver: design tokens (Tailwind CSS v4)
+ *
+ * Import this file once in your global stylesheet:
+ *   @import './foundation/theme.css';
+ * It must come after `@import 'tailwindcss';` (or replace it, since it imports Tailwind itself).
+ *
+ * Every color below becomes a Tailwind utility automatically, e.g.
+ *   --color-leaf  ->  bg-leaf, text-leaf, ring-leaf, border-leaf …
+ */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  /* Typography ------------------------------------------------------- */
+  --font-sans: 'DM Sans', ui-sans-serif, system-ui, sans-serif; /* UI text */
+  --font-display: 'Fraunces', ui-serif, Georgia, serif; /* headlines, prices in heroes */
+
+  /* Neutrals ---------------------------------------------------------- */
+  --color-ink: #1c211c; /* primary text */
+  --color-muted: #6c7067; /* secondary text, captions */
+  --color-line: #e6dfd1; /* borders, dividers, 1px rings */
+  --color-paper: #f4efe4; /* secondary surfaces, chips */
+  --color-cream: #fbf8f2; /* app background */
+
+  /* Produce: primary brand ------------------------------------------- */
+  --color-leaf: #2f5d3a; /* primary CTA, active states */
+  --color-leaf-deep: #1f4029; /* hero backgrounds, loyalty card */
+  --color-leaf-soft: #e3ebdc; /* selected backgrounds, info banners */
+  --color-sprout: #7fa35b; /* accents on dark green, success icons */
+  --color-wheat: #e9d9b4; /* highlight on dark backgrounds */
+
+  /* Butchery: specialist mode ---------------------------------------- */
+  --color-blood: #7a2418; /* butchery CTA, selected chips */
+  --color-blood-deep: #4a160f; /* butchery hero, summary cards */
+  --color-blood-soft: #f3e3de; /* butchery tinted surfaces */
+
+  /* Offers & notices -------------------------------------------------- */
+  --color-saffron: #c9861f; /* "In season", "Est.", scarcity */
+  --color-saffron-soft: #f8ead1; /* price-policy banners */
+}
+
+@layer base {
+  body {
+    background: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Hides scrollbars on horizontal rails while keeping them scrollable. */
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

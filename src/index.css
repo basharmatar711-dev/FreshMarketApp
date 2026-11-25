@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Fraunces', ui-serif, Georgia, serif;
+
+  --color-studio: #e9e2d3;
+  --color-paper: #f4efe4;
+  --color-cream: #fbf8f2;
+  --color-ink: #1c211c;
+  --color-muted: #6c7067;
+  --color-line: #e6dfd1;
+  --color-leaf: #2f5d3a;
+  --color-leaf-deep: #1f4029;
+  --color-leaf-soft: #e3ebdc;
+  --color-sprout: #7fa35b;
+  --color-wheat: #e9d9b4;
+  --color-blood: #7a2418;
+  --color-blood-deep: #4a160f;
+  --color-blood-soft: #f3e3de;
+  --color-saffron: #c9861f;
+  --color-saffron-soft: #f8ead1;
+}
+
+@layer base {
+  body {
+    background: var(--color-studio);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@utility animate-toast {
+  animation: toast-in 220ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}

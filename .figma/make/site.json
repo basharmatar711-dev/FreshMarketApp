@@ -1,0 +1,10 @@
+{
+  "description": "Shop fresh fruits, vegetables, and butcher-quality meats with a complete online grocery experience for browsing products, managing a cart, and placing orders.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
